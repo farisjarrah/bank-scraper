@@ -1,4 +1,4 @@
-# auto bank data gatherer
+# bank-scraper
 this project uses pyautogui and pyperclip to use your normal browsing browser and password manager to move your mouse and keyboard to login to various banks and institutions and scrape your data and output it to a log file.
 
 ## supported OS's
