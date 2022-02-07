@@ -19,7 +19,7 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 - [x] output data as csv
 - [ ] output data as json
 - [x] site wide config file
-- [ ] log runs in a log file
+- [X] log runs in a log file
 - [ ] take a snapshot pdf of each site run
 - [ ] cli usage, output to cli only and/or output specific site data only
 - [ ] cleanly iterate through each account data
@@ -30,7 +30,7 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 ## supported sites
 - [x] ally bank
 - [x] schwab brokerage
-- [ ] fidelity brokerage - IN PROGRESS
+- [ ] fidelity brokerage
 - [ ] honda financial
 - [ ] discover card
 - [ ] citi bank
