@@ -1,9 +1,8 @@
 #! python3
-import logging
-
 import pyautogui
 
 import config as cfg
+import logger
 import browsers, ally, schwab
 
 # PyAutoGui running options
@@ -12,13 +11,11 @@ import browsers, ally, schwab
 # engage by moving mouse to corner of screen
 pyautogui.FAILSAFE = cfg.pyautogui_running_opts["pyautogui_failsafe"]
 
-logging.basicConfig(filename=cfg.settings["program_log"], encoding='utf-8', level=cfg.settings["log_level"], format='%(asctime)s - %(levelname)s - %(message)s')
-
-
 # main run
 def main():
     print('Press Ctrl-C to quit.')
     try:
+        #logger.db_init()
         browsers.open_new_window()
         ally.ally_run()
         schwab.schwab_run()

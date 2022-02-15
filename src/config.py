@@ -12,6 +12,7 @@ settings = {
     "debug_extra_safety": True,
     "default_browser": "edge",
     "default_duration": 0.25,
+    "db_name": "balances.sql",
     "log_file": "balances.csv",
     "program_log": "logfile.txt",
     "log_level": "DEBUG",
