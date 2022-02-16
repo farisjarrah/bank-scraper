@@ -30,6 +30,7 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 - [ ] handle bitwarden auto MFA
 - [ ] rotate passwords for user, ensure new password is saved to password manager, ensure old password is saved as a note appended to the rest of the note data
 - [ ] simple data visualization by time and account, and aggregate data accross accounts
+- [ ] export data to local or remote storage
 
 ## supported sites
 - [x] ally bank
@@ -46,3 +47,5 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 
 ## TODO
 - fix browser tabs not closing after ally and schwab runs
+- start saving all entries in sqlite db, and only export data as csv or json if requested
+  - can we save PDF's in sqlite3?
