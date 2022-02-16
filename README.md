@@ -7,6 +7,9 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 ## supported browsers
 * edge
 
+## supported display resolutions
+1920x1080
+
 ## supported password managers
 * bitwarden edge extension - need to be already logged in to the extension for this to work
 
@@ -14,6 +17,7 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 * this project assumes that you have recently logged into these services and will not handle cell phone auth to ensure you can log in. Only simple username and password login
 * can not handle bitwarden's mfa token generating facilities yet
 * pyautogui WILL take over your mouse and keyboard, to try to force it to escape move your mouse to the upper corner of the screen
+* this project basically works by putting an edge window to the left side of your 1920x1080 screen on Windows 10 and working with web sites that way
 
 ## features and roadmap
 - [x] output data as csv
@@ -31,10 +35,14 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 - [x] ally bank
 - [x] schwab brokerage
 - [ ] fidelity brokerage
-- [ ] honda financial
+- [ ] honda financial - need to support negative balances for loans
 - [ ] discover card
 - [ ] citi bank
 - [ ] td bank card
+- [ ] truist bank
+- [ ] bank of the west
+- [ ] chase
+- [ ] bank of america
 
 ## TODO
 - fix browser tabs not closing after ally and schwab runs
