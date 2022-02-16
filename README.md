@@ -31,6 +31,11 @@ this project uses pyautogui and pyperclip to use your normal browsing browser an
 - [ ] rotate passwords for user, ensure new password is saved to password manager, ensure old password is saved as a note appended to the rest of the note data
 - [ ] simple data visualization by time and account, and aggregate data accross accounts
 - [ ] export data to local or remote storage
+- [ ] MacOS Support
+- [ ] Linux Support
+- [ ] Firefox Support
+- [ ] Safari Support
+- [ ] Black Code Formatting
 
 ## supported sites
 - [x] ally bank
