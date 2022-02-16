@@ -4,6 +4,7 @@ import logging
 import pyautogui
 
 import debugSafety
+import pwmanager
 import config as cfg
 
 def open_new_blink_window():
@@ -48,3 +49,13 @@ def open_new_tab():
 def close_tab():
     if cfg.settings["default_browser"] in cfg.browsers["blink"]:
         close_blink_tab()
+
+def login_to_site(url):
+    open_new_tab()
+    debugSafety.debug_extra_safety()
+    pyautogui.write(url)
+    pyautogui.press("enter")
+    time.sleep(1)
+    pwmanager.autofill()
+    log_entry = f"logged in to {url}"
+    logging.info(log_entry)
