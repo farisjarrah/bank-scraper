@@ -1,13 +1,24 @@
+import logging
 import toolbox
 import browsers
 import logger
-import logging
 
-###
+def bank_run():
+    browsers.open_new_window()
+    ally()
+    schwab()
+    browsers.close_window()
+
+### Ally Bank
+def ally():
+    browsers.login_to_site("https://secure.ally.com/")
+    logger.log_csv(toolbox.return_bank_balance("ally", 217, 451, 150, 480, 415, 452))
+    logger.log_csv(toolbox.return_bank_balance("ally", 252, 625, 151, 647, 417, 620))
+    browsers.close_tab() # close ally tab
+    logging.info("successfully completed ally run")
+
 ### Schwab Bank
-###
-## This is the main schwab bank run. It gathers schwab bank account entry data and output it as a csv for the logger: datestamp,schwab,<account identifier>,$<account balance>
-def schwab_run():
+def schwab():
     browsers.login_to_site("https://client.schwab.com/Login/SignOn/CustomerCenterLogin.aspx")
     logger.log_csv(toolbox.return_bank_balance("schwab", 162, 793, 134, 806, 783, 786))
     logger.log_csv(toolbox.return_bank_balance("schwab", 238, 835, 130, 855, 784, 837))

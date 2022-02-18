@@ -1,5 +1,2 @@
-logging
-time
-datetime
 pyautogui
 pyperclip
