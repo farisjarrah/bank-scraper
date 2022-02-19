@@ -1,8 +1,13 @@
-import debugSafety
 import config as cfg
 
 import pyautogui
 import pyperclip
+
+import time
+
+def safe_click():
+        pyautogui.click(cfg.settings["safe_space_x"], cfg.settings["safe_space_y"])
+        time.sleep(0.4)
 
 def copy():
     pyautogui.hotkey("ctrl", "c")
@@ -34,7 +39,7 @@ def build_account_name(
     account_number_stub = return_text_area(account_num_stub_coordinates_x, account_num_stub_coordinates_y)
     return account_type + account_number_stub
 
-def return_bank_balance(
+def return_bank_balance_long(
     bank,
     acct_name_pos_x,
     acct_name_pos_y,
@@ -43,13 +48,26 @@ def return_bank_balance(
     balance_pos_x,
     balance_pos_y
     ):
-    debugSafety.debug_extra_safety()
+    safe_click()
     account_name = build_account_name(
         acct_name_pos_x,
         acct_name_pos_y,
         acct_num_stub_pos_x,
         acct_num_stub_pos_y
         )
+    balance = return_text_area(balance_pos_x, balance_pos_y)
+    entry = f"{bank},{account_name},{balance}"
+    return entry
+
+def return_bank_balance_short(
+    bank,
+    acct_name_pos_x,
+    acct_name_pos_y,
+    balance_pos_x,
+    balance_pos_y
+    ):
+    safe_click()
+    account_name = return_text_area(acct_name_pos_x, acct_name_pos_y)
     balance = return_text_area(balance_pos_x, balance_pos_y)
     entry = f"{bank},{account_name},{balance}"
     return entry

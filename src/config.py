@@ -9,7 +9,6 @@ pyautogui_running_opts = {
 }
 
 settings = {
-    "debug_extra_safety": True,
     "default_browser": "edge",
     "default_duration": 0.25,
     "db_name": "balances.sql",

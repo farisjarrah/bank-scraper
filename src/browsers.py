@@ -3,7 +3,7 @@ import logging
 
 import pyautogui
 
-import debugSafety
+import toolbox
 import pwmanager
 import config as cfg
 
@@ -20,7 +20,7 @@ def open_new_blink_window():
     logging.info('opened new blink family browser window')
 
 def open_new_blink_tab():
-    debugSafety.debug_extra_safety()
+    toolbox.safe_click()
     pyautogui.hotkey("ctrl", "t")
     pyautogui.leftClick(205, 30, duration=cfg.settings["default_duration"])
     logging.info('opened new blink family browser tab')
@@ -30,7 +30,7 @@ def close_blink_window():
     logging.info('closed blink family browser window')
 
 def close_blink_tab():
-    debugSafety.debug_extra_safety()
+    toolbox.safe_click()
     pyautogui.hotkey("ctrl" + "w")
     logging.info('closed blink family browser window')
 
@@ -52,7 +52,7 @@ def close_tab():
 
 def login_to_site(url):
     open_new_tab()
-    debugSafety.debug_extra_safety()
+    toolbox.safe_click()
     pyautogui.write(url)
     pyautogui.press("enter")
     time.sleep(1)
